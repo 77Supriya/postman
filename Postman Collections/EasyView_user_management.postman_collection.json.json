@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "255a7dbc-2f53-4de3-b6dd-7190e224c9b8",
+		"name": "EasyView user management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "448bcf6d-3742-459f-be73-c2475d96c11e",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"token\",jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "f2ece5d1-9ed9-4191-91cf-8510c6062dc5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"password\",\r\n    \"userName\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/login"
+			},
+			"response": []
+		},
+		{
+			"name": "roles_create roles",
+			"id": "0505ce2f-3f2a-4a73-962e-4b736f3817f3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MTA4NDI0MywiaWF0IjoxNjcwMjIwMjQzfQ.J1QKTsnc5jlrf7OJM7LQ5nwtej5Fmu8y-rYfK7Ue-T0mwasKa5nusJl_2AT629gE7t7NUPEzByPhQdm9EPIRtw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleName\": \"test1\",\r\n    \"description\": null,\r\n    \"menus\": [\r\n        {\r\n            \"name\": \"Balance\",\r\n            \"componentName\": \"Balance\",\r\n            \"path\": \"/balance\",\r\n            \"parentMenu\": \"Inventory\",\r\n            \"menuOrder\": 1,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Load Inquiry\",\r\n            \"componentName\": \"Load Inquiry\",\r\n            \"path\": \"/loadenquiry\",\r\n            \"parentMenu\": \"Outbound\",\r\n            \"menuOrder\": 3,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"ASN/Receipt\",\r\n            \"componentName\": \"ASN/Receipt\",\r\n            \"path\": \"/asn\",\r\n            \"parentMenu\": \"Inbound\",\r\n            \"menuOrder\": 1,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Shipment Order Create\",\r\n            \"componentName\": \"Shipment Order Create\",\r\n            \"path\": \"/shipmentordercreate\",\r\n            \"parentMenu\": \"Outbound\",\r\n            \"menuOrder\": 2,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"UPLOAD SELECTED\": false,\r\n                    \"CREATE\": false,\r\n                    \"edit\": false,\r\n                    \"DELETE SELECTED\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Shipment Order\",\r\n            \"componentName\": \"Shipment Order\",\r\n            \"path\": \"/shipmentorder\",\r\n            \"parentMenu\": \"Outbound\",\r\n            \"menuOrder\": 1,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Logs\",\r\n            \"componentName\": \"Logs\",\r\n            \"path\": \"/logs\",\r\n            \"parentMenu\": \"Permission\",\r\n            \"menuOrder\": 4,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Messages\",\r\n            \"componentName\": \"Messages\",\r\n            \"path\": \"/messages\",\r\n            \"parentMenu\": \"Translations\",\r\n            \"menuOrder\": 2,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"ASN/Receipt Create\",\r\n            \"componentName\": \"ASN/Receipt Create\",\r\n            \"path\": \"/asnreceiptcreate\",\r\n            \"parentMenu\": \"Inbound\",\r\n            \"menuOrder\": 2,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"UPLOAD SELECTED\": false,\r\n                    \"CREATE\": false,\r\n                    \"edit\": false,\r\n                    \"DELETE SELECTED\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Ion Credentials\",\r\n            \"componentName\": \"Ion Credentials\",\r\n            \"path\": \"/ioncredentials\",\r\n            \"parentMenu\": \"Permission\",\r\n            \"menuOrder\": 6,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Role\",\r\n            \"componentName\": \"Role\",\r\n            \"path\": \"/role\",\r\n            \"parentMenu\": \"Permission\",\r\n            \"menuOrder\": 2,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"Edit Roles\": false,\r\n                    \"read\": true,\r\n                    \"ADD ROLES\": false,\r\n                    \"edit\": false,\r\n                    \"Delete Roles\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Label\",\r\n            \"componentName\": \"Label\",\r\n            \"path\": \"/label\",\r\n            \"parentMenu\": \"Translations\",\r\n            \"menuOrder\": 1,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"name\": \"Birst Credentials\",\r\n            \"componentName\": \"Birst Credentials\",\r\n            \"path\": \"/birstcredentials\",\r\n            \"parentMenu\": \"Permission\",\r\n            \"menuOrder\": 5,\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"read\": true,\r\n                    \"edit\": false\r\n                }\r\n            }\r\n        }\r\n    ],\r\n    \"users\": [],\r\n    \"warehouseNames\": [\r\n        \"wmwhse5\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/roles"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Roles",
+			"id": "af2bc8d2-fbcb-44ae-b06f-180047e4132a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1MDI2MzA5MCwiaWF0IjoxNjQ5Mzk5MDkwfQ.Q8MJUupJR2BPiMkeGH8ZuIj_jF_jH_fjfnIzcGONvOwx3z3AtVZrv6sGV1MxZ0Lz7J_BHuf82N7__nmNiHs7iQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/roles"
+			},
+			"response": []
+		},
+		{
+			"name": "update roles",
+			"id": "b6a863f0-119f-4b66-a6b5-46b363a123fb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MTA4NTA2MywiaWF0IjoxNjcwMjIxMDYzfQ.Xl4x9nsUnijfWMFblMl7VbWGWzb7UTrIe6Pf2vtVmeddaig7W1LMwFkytrXYXIaslV-TSWMB_Zf5kM9SCfbSOA"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Roledescription\",\r\n    \"menus\": [\r\n        {\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"additionalProp1\": true,\r\n                    \"additionalProp2\": true,\r\n                    \"additionalProp3\": true\r\n                }\r\n            },\r\n            \"componentName\": \"ASN/Receipt\",\r\n            \"menuOrder\": 1,\r\n            \"menus\": [\r\n                null\r\n            ],\r\n            \"name\": \"ASN/Receipt\",\r\n            \"parentMenu\": \"Inbound\",\r\n            \"path\": \"/asn\"\r\n        }\r\n    ],\r\n    \"roleName\": \"test\",\r\n    \"users\": [\r\n        {\r\n            \"admin\": true,\r\n            \"email\": \"abc@gmail.com\",\r\n            \"fullName\": \"TMS Administrator\",\r\n            \"language\": \"string\",\r\n            \"menuPermissions\": [\r\n                {\r\n                    \"action\": {\r\n                        \"actions\": {\r\n                            \"additionalProp1\": true,\r\n                            \"additionalProp2\": true,\r\n                            \"additionalProp3\": true\r\n                        }\r\n                    },\r\n                    \"componentName\": \"ASN/Receipt\",\r\n                    \"menuOrder\": 1,\r\n                    \"menus\": [\r\n                        null\r\n                    ],\r\n                    \"name\": \"ASN/Receipt\",\r\n                    \"parentMenu\": \"Inbound\",\r\n                    \"path\": \"/asn\"\r\n                }\r\n            ],\r\n            \"owner\": [\r\n                \"string\"\r\n            ],\r\n            \"password\": \"password\",\r\n            \"resourcePermissions\": [\r\n                {\r\n                    \"enable\": false,\r\n                    \"permissionName\": \"GET_ASN_HEADER_RESPONSE\",\r\n                    \"permissionValue\": \"/easyview/asnheaderresponse\",\r\n                    \"usersId\": 0\r\n                }\r\n            ],\r\n            \"roleNames\": [\r\n                \"test\",\r\n                \"test\"\r\n            ],\r\n            \"username\": \"tmsadmin\",\r\n            \"warehouse\": [\r\n                \"string\"\r\n            ]\r\n        }\r\n    ],\r\n    \"warehouseNames\": [\r\n        \"wmwhse1\",\r\n        \"wmwhse2\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/roles"
+			},
+			"response": []
+		},
+		{
+			"name": "get roles by name",
+			"id": "81a4683b-26b8-4d3a-8145-d68a926a6386",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1MDI2MzA5MCwiaWF0IjoxNjQ5Mzk5MDkwfQ.Q8MJUupJR2BPiMkeGH8ZuIj_jF_jH_fjfnIzcGONvOwx3z3AtVZrv6sGV1MxZ0Lz7J_BHuf82N7__nmNiHs7iQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/roles/role1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete roles",
+			"id": "a9b0ccdf-a869-4a7b-9c80-abc3a70da1b3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MTA4NjAxMCwiaWF0IjoxNjcwMjIyMDEwfQ.4fsK7LIobmGrrTIRORcwnUKyAwyr3QjLil1mdn38i3l3WGkOq0Rl5EIWvPzZX-A66OHMckbryr5qGor4Tfs8Fw"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/roles/test1"
+			},
+			"response": []
+		},
+		{
+			"name": "User_/forgotpassword",
+			"id": "e6d2592e-d182-43f7-b9db-7d98ef50ee73",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"emailId\": \"abc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/forgotpassword"
+			},
+			"response": []
+		},
+		{
+			"name": "User_/resetpassword",
+			"id": "57b36f1a-9cde-4df6-811e-405587d2adb8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"newPassword\": \"pass@1\",\r\n  \"password\": \"password\",\r\n  \"username\": \"tmsadmin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/resetpassword"
+			},
+			"response": []
+		},
+		{
+			"name": "User_/resetpasswordbytoken",
+			"id": "89cde2d6-2af8-4df9-a300-92a65874df1f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"confirmPassword\": \"pass@1\",\r\n  \"password\": \"password\",\r\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ\",\r\n  \"user\": {\r\n    \"admin\": true,\r\n    \"email\": \"abc@gmail.com\",\r\n    \"fullName\": \"TMS Administrator\",\r\n    \"menuPermissions\": [\r\n      {\r\n        \"add\": true,\r\n        \"componentName\": \"ASN/Receipt\",\r\n        \"delete\": true,\r\n        \"edit\": true,\r\n        \"menus\": [\r\n          null\r\n        ],\r\n        \"name\": \"ASN/Receipt\",\r\n        \"parentMenu\": \"Inbound\",\r\n        \"path\": \"/asn\",\r\n        \"readOnly\": true,\r\n        \"update\": true\r\n      }\r\n    ],\r\n    \"owner\": [\r\n      {\r\n        \"id\": 0,\r\n        \"ownerName\": \"string\"\r\n      }\r\n    ],\r\n    \"password\": \"password\",\r\n    \"roleNames\": [\r\n      \"Role1\",\r\n      \"Role2\"\r\n    ],\r\n    \"username\": \"tmsadmin\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/resetpasswordbytoken"
+			},
+			"response": []
+		},
+		{
+			"name": "User_ /tokengenerate",
+			"id": "aa51ea41-88b7-42c7-a5d8-dc7fc34657dc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"apiKey\": \"5a145ce4-5223-4513-8b9d-d5718e329905\",\r\n  \"apiToken\": \"UvDARjO3DrObGITEOhSN0A9lQHdA344YZGXgnV9y6QmjuduIm1\",\r\n  \"responseStatus\": \"S\",\r\n  \"userName\": \"tmsadmin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/tokengenerate"
+			},
+			"response": []
+		},
+		{
+			"name": "Users_/get users",
+			"id": "52e86592-d6bd-417f-814e-ee7a588718f4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Users_/ create users",
+			"id": "cf663351-aa53-4041-a153-cdbff3fd3a98",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"admin\": true,\r\n    \"email\": \"abc@gmail.com\",\r\n    \"fullName\": \"TMS Administrator\",\r\n    \"language\": \"string\",\r\n    \"menuPermissions\": [\r\n        {\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"additionalProp1\": true,\r\n                    \"additionalProp2\": true,\r\n                    \"additionalProp3\": true\r\n                }\r\n            },\r\n            \"componentName\": \"ASN/Receipt\",\r\n            \"menuOrder\": 1,\r\n            \"menus\": [\r\n                null\r\n            ],\r\n            \"name\": \"ASN/Receipt\",\r\n            \"parentMenu\": \"Inbound\",\r\n            \"path\": \"/asn\"\r\n        }\r\n    ],\r\n    \"owner\": [\r\n        \"string\"\r\n    ],\r\n    \"password\": \"password\",\r\n    \"resourcePermissions\": [\r\n        {\r\n            \"enable\": false,\r\n            \"permissionName\": \"GET_ASN_HEADER_RESPONSE\",\r\n            \"permissionValue\": \"/easyview/asnheaderresponse\",\r\n            \"usersId\": 0\r\n        }\r\n    ],\r\n    \"roleNames\": [\r\n        \"Role1\",\r\n        \"Role2\"\r\n    ],\r\n    \"username\": \"tmsadmin\",\r\n    \"warehouse\": [\r\n        \"string\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Users_/ Update users by email",
+			"id": "6d2471bc-7796-4042-9673-e23cd1fcd992",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"admin\": true,\r\n  \"email\": \"abc@gmail.com\",\r\n  \"fullName\": \"TMS Administrator\",\r\n  \"menuPermissions\": [\r\n    {\r\n      \"add\": true,\r\n      \"componentName\": \"ASN/Receipt\",\r\n      \"delete\": true,\r\n      \"edit\": true,\r\n      \"menus\": [\r\n        null\r\n      ],\r\n      \"name\": \"ASN/Receipt\",\r\n      \"parentMenu\": \"Inbound\",\r\n      \"path\": \"/asn\",\r\n      \"readOnly\": true,\r\n      \"update\": true\r\n    }\r\n  ],\r\n  \"owner\": [\r\n    {\r\n      \"id\": 0,\r\n      \"ownerName\": \"string\"\r\n    }\r\n  ],\r\n  \"password\": \"password\",\r\n  \"roleNames\": [\r\n    \"Role1\",\r\n    \"Role2\"\r\n  ],\r\n  \"username\": \"tmsadmin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Users_/Get users by email",
+			"id": "fdfbe171-bd01-4618-88ff-dc181f24b836",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/users/email"
+			},
+			"response": []
+		},
+		{
+			"name": "Users_/Delete users by email",
+			"id": "50b862f6-3b64-4ad8-8d35-1cd23477ce89",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "s3demo1.eastus.cloudapp.azure.com:8800/users"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "76602ad6-f804-40b6-a392-a45656b3cb9b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "b840b69c-03c7-4ebc-8497-7b159c24a228",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "menu authorities asn",
+			"id": "e9f41e3b-f197-4fd1-87ea-0662f9267ace",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Nzk1MTI3MywiaWF0IjoxNjU3MDg3MjczfQ.S0aW6WvkBnu4jjbXF-eHfFJbf_urw3KnvPBd4YKOswLT172eVuVQOo1YDVAJ6Tt1RtQQoOdm-PI64rUt29hmXA"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"action\": {\r\n    \"actions\": {\r\n      \"CREATE\": false,\r\n      \"UPLOAD SELECTED\": false,\r\n      \"DELETE SELECTED\": false\r\n    }\r\n  },\r\n  \"componentName\": \"ASN/Receipt Create\",\r\n  \"menuOrder\": 1,\r\n  \"menus\": [\r\n    null\r\n  ],\r\n  \"name\": \"ASN/Receipt Create\",\r\n  \"parentMenu\": \"Inbound\",\r\n  \"path\": \"/asnreceiptcreate\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "ezdemo.eastus.cloudapp.azure.com:8800/menuauthoritie"
+			},
+			"response": []
+		},
+		{
+			"name": "menu authorities orders",
+			"id": "2d71431a-03f1-416a-bff4-c7844f68ee82",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Njc1OTIxNywiaWF0IjoxNjU1ODk1MjE3fQ.uspevNIRfD-PZru1l7aP6QcdYIXN2toUkVdDE0ASx7Wp6qY7Tx2Bb2EQpEJt5xPkhKkkUERyyUhKRXpwR8zGMw"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"action\": {\r\n    \"actions\": {\r\n      \"CREATE\": false,\r\n      \"UPLOAD SELECTED\": false,\r\n      \"DELETE SELECTED\": false\r\n    }\r\n  },\r\n  \"componentName\": \"Shipment Order Create\",\r\n  \"menuOrder\": 2,\r\n  \"menus\": [\r\n    null\r\n  ],\r\n  \"name\": \"Shipment Order Create\",\r\n  \"parentMenu\": \"Outbound\",\r\n  \"path\": \"/shipmentordercreate\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "ezdemo.eastus.cloudapp.azure.com:8800/menuauthoritie"
+			},
+			"response": []
+		},
+		{
+			"name": "menu authorities warehouse",
+			"id": "1904f25a-ce55-489f-8832-0339c4f2b93e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Njc1OTIxNywiaWF0IjoxNjU1ODk1MjE3fQ.uspevNIRfD-PZru1l7aP6QcdYIXN2toUkVdDE0ASx7Wp6qY7Tx2Bb2EQpEJt5xPkhKkkUERyyUhKRXpwR8zGMw"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"action\": {\r\n    \"actions\": {\r\n       \r\n        \"Delete Warehouse\": \"false\",\r\n         \"ADD WAREHOUSE\": \"false\"\r\n    \r\n    }\r\n  },\r\n  \"componentName\": \"Warehouse\",\r\n  \"menuOrder\": 1,\r\n  \"menus\": [\r\n    null\r\n  ],\r\n  \"name\": \"Warehouse\",\r\n  \"parentMenu\": \"Permission\",\r\n  \"path\": \"/warehouse\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "ezdemo.eastus.cloudapp.azure.com:8800/menuauthoritie"
+			},
+			"response": []
+		},
+		{
+			"name": "menu authorities roles",
+			"id": "d483fa45-a87b-4d6f-96aa-8d31623111fa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Njc1OTIxNywiaWF0IjoxNjU1ODk1MjE3fQ.uspevNIRfD-PZru1l7aP6QcdYIXN2toUkVdDE0ASx7Wp6qY7Tx2Bb2EQpEJt5xPkhKkkUERyyUhKRXpwR8zGMw"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"action\": {\r\n    \"actions\": {\r\n      \"ADD ROLES\": false,\r\n      \"Edit Roles\": false,\r\n      \"Delete Roles\": false\r\n    }\r\n  },\r\n  \"componentName\": \"Role\",\r\n  \"menuOrder\": 2,\r\n  \"menus\": [\r\n    null\r\n  ],\r\n  \"name\": \"Role\",\r\n  \"parentMenu\": \"Permission\",\r\n  \"path\": \"/role\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "ezdemo.eastus.cloudapp.azure.com:8800/menuauthoritie"
+			},
+			"response": []
+		},
+		{
+			"name": "menu authorities user",
+			"id": "e3f05dc0-8664-41e4-9877-e148201c1e3b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Njc1OTIxNywiaWF0IjoxNjU1ODk1MjE3fQ.uspevNIRfD-PZru1l7aP6QcdYIXN2toUkVdDE0ASx7Wp6qY7Tx2Bb2EQpEJt5xPkhKkkUERyyUhKRXpwR8zGMw"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"action\": {\r\n    \"actions\": {\r\n      \"ADD USER\": false,\r\n      \"Edit User\": false,\r\n      \"Add Trading Partner\": false,\r\n      \"Modify Trading Partner\": false,\r\n      \"Delete User\": false\r\n    }\r\n  },\r\n  \"componentName\": \"User\",\r\n  \"menuOrder\": 3,\r\n  \"menus\": [\r\n    null\r\n  ],\r\n  \"name\": \"User\",\r\n  \"parentMenu\": \"\",\r\n  \"path\": \" /user\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "ezdemo.eastus.cloudapp.azure.com:8800/menuauthoritie"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "ab93ebe4-f5c4-48fb-a577-3f0bed243e65",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get roles",
+			"id": "0163b15d-67c4-40e3-92b7-c0a703c94042",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MTA4NTA2MywiaWF0IjoxNjcwMjIxMDYzfQ.Xl4x9nsUnijfWMFblMl7VbWGWzb7UTrIe6Pf2vtVmeddaig7W1LMwFkytrXYXIaslV-TSWMB_Zf5kM9SCfbSOA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/roles"
+			},
+			"response": []
+		},
+		{
+			"name": "get inboundSFTPServer",
+			"id": "838640a8-3ade-44c3-bfaa-360fa5bba91c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MTA5NjI5NiwiaWF0IjoxNjcwMjMyMjk2fQ.Lci0QzM-XnAt4K6prQDsGga3cqFw0oJN12eEenQpDo_r1z7Ic14NsVU7KfJm9U_IJK7SeWSys_sQWSPWP6oIDg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"warehouseName\": \"KX1\",\r\n        \"sftpServerName\": \"sftp1\",\r\n        \"dataPathType\": \"945\",\r\n        \"sourceSftp\": \"sftp1\",\r\n        \"destinationSftp\": \"sftp1\",\r\n        \"inputFolder\": \"/EDI/inbound/input/\",\r\n        \"archiveFolder\": \"/EDI/outbound/archive/\",\r\n        \"outputFolder\": \"/EDI/outbound/output/\",\r\n        \"acknowledgeFolder\": \"/EDI/outbound/acknowledge/\",\r\n        \"inputFileNameMask\": \".xml\",\r\n        \"outputFileNameMask\": \".edi\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "qavm-s3group.eastus.cloudapp.azure.com:9002/umapi/edi/SFTPServer"
+			},
+			"response": []
+		}
+	]
+}
