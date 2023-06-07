@@ -270,9 +270,15 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "GET",
 				"header": [],
-				"url": "s3demo1.eastus.cloudapp.azure.com:8800/users"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/userswithpage"
 			},
 			"response": []
 		},
