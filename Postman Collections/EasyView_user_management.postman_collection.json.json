@@ -35,14 +35,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"password\": \"password\",\r\n    \"userName\": \"admin\"\r\n}",
+					"raw": "{\r\n    \"userName\": \"admin\",\r\n    \"password\": \"password@1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/login"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/login"
 			},
 			"response": []
 		},
