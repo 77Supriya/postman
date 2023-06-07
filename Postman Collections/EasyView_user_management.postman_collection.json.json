@@ -220,6 +220,12 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -231,7 +237,7 @@
 						}
 					}
 				},
-				"url": "s3demo1.eastus.cloudapp.azure.com:8800/resetpasswordbytoken"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/resetpasswordbytoken"
 			},
 			"response": []
 		},
