@@ -150,12 +150,16 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MTA4NjAxMCwiaWF0IjoxNjcwMjIyMDEwfQ.4fsK7LIobmGrrTIRORcwnUKyAwyr3QjLil1mdn38i3l3WGkOq0Rl5EIWvPzZX-A66OHMckbryr5qGor4Tfs8Fw"
+						"token": "{{token}}"
 					}
 				},
 				"method": "DELETE",
 				"header": [],
-				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/roles/test1"
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/roles/rolename"
 			},
 			"response": []
 		},
