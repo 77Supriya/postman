@@ -170,18 +170,24 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"emailId\": \"abc@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"emailId\": \"admin\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "s3demo1.eastus.cloudapp.azure.com:8800/forgotpassword"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/password/forgot"
 			},
 			"response": []
 		},
