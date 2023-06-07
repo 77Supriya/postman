@@ -131,12 +131,12 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1MDI2MzA5MCwiaWF0IjoxNjQ5Mzk5MDkwfQ.Q8MJUupJR2BPiMkeGH8ZuIj_jF_jH_fjfnIzcGONvOwx3z3AtVZrv6sGV1MxZ0Lz7J_BHuf82N7__nmNiHs7iQ"
+						"token": "{{token}}"
 					}
 				},
 				"method": "GET",
 				"header": [],
-				"url": "s3demo1.eastus.cloudapp.azure.com:8800/roles/role1"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/roles/admin"
 			},
 			"response": []
 		},
