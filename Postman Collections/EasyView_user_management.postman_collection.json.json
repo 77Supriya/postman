@@ -75,25 +75,6 @@
 			"response": []
 		},
 		{
-			"name": "Get Roles",
-			"id": "af2bc8d2-fbcb-44ae-b06f-180047e4132a",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": {
-						"token": "{{token}}"
-					}
-				},
-				"method": "GET",
-				"header": [],
-				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/roleswithpage"
-			},
-			"response": []
-		},
-		{
 			"name": "update roles",
 			"id": "b6a863f0-119f-4b66-a6b5-46b363a123fb",
 			"protocolProfileBehavior": {
@@ -118,6 +99,25 @@
 					}
 				},
 				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/roles"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Roles",
+			"id": "af2bc8d2-fbcb-44ae-b06f-180047e4132a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/roleswithpage"
 			},
 			"response": []
 		},
@@ -373,6 +373,12 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "DELETE",
 				"header": [],
 				"body": {
@@ -384,7 +390,7 @@
 						}
 					}
 				},
-				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/users/rsupriya@s3groupinc.com"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/users/test@gmail.com"
 			},
 			"response": []
 		},
