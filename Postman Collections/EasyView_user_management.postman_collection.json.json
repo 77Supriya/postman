@@ -383,19 +383,6 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
-			"id": "b840b69c-03c7-4ebc-8497-7b159c24a228",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": ""
-			},
-			"response": []
-		},
-		{
 			"name": "menu authorities asn",
 			"id": "e9f41e3b-f197-4fd1-87ea-0662f9267ace",
 			"protocolProfileBehavior": {
