@@ -198,18 +198,24 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"newPassword\": \"pass@1\",\r\n  \"password\": \"password\",\r\n  \"username\": \"tmsadmin\"\r\n}",
+					"raw": "{\r\n  \"newPassword\": \"password@1\",\r\n  \"password\": \"password\",\r\n  \"username\": \"admin\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "s3demo1.eastus.cloudapp.azure.com:8800/resetpassword"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/resetpassword"
 			},
 			"response": []
 		},
@@ -392,7 +398,7 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Nzk1MTI3MywiaWF0IjoxNjU3MDg3MjczfQ.S0aW6WvkBnu4jjbXF-eHfFJbf_urw3KnvPBd4YKOswLT172eVuVQOo1YDVAJ6Tt1RtQQoOdm-PI64rUt29hmXA"
+						"token": "{{token}}"
 					}
 				},
 				"method": "PUT",
