@@ -559,34 +559,6 @@
 				"url": "http://qa-s3group.eastus.cloudapp.azure.com:9000/umapi/roles"
 			},
 			"response": []
-		},
-		{
-			"name": "get inboundSFTPServer",
-			"id": "838640a8-3ade-44c3-bfaa-360fa5bba91c",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": {
-						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MTA5NjI5NiwiaWF0IjoxNjcwMjMyMjk2fQ.Lci0QzM-XnAt4K6prQDsGga3cqFw0oJN12eEenQpDo_r1z7Ic14NsVU7KfJm9U_IJK7SeWSys_sQWSPWP6oIDg"
-					}
-				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    {\r\n        \"warehouseName\": \"KX1\",\r\n        \"sftpServerName\": \"sftp1\",\r\n        \"dataPathType\": \"945\",\r\n        \"sourceSftp\": \"sftp1\",\r\n        \"destinationSftp\": \"sftp1\",\r\n        \"inputFolder\": \"/EDI/inbound/input/\",\r\n        \"archiveFolder\": \"/EDI/outbound/archive/\",\r\n        \"outputFolder\": \"/EDI/outbound/output/\",\r\n        \"acknowledgeFolder\": \"/EDI/outbound/acknowledge/\",\r\n        \"inputFileNameMask\": \".xml\",\r\n        \"outputFileNameMask\": \".edi\"\r\n    }\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "qavm-s3group.eastus.cloudapp.azure.com:9002/umapi/edi/SFTPServer"
-			},
-			"response": []
 		}
 	]
 }
