@@ -289,18 +289,24 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"admin\": true,\r\n    \"email\": \"abc@gmail.com\",\r\n    \"fullName\": \"TMS Administrator\",\r\n    \"language\": \"string\",\r\n    \"menuPermissions\": [\r\n        {\r\n            \"action\": {\r\n                \"actions\": {\r\n                    \"additionalProp1\": true,\r\n                    \"additionalProp2\": true,\r\n                    \"additionalProp3\": true\r\n                }\r\n            },\r\n            \"componentName\": \"ASN/Receipt\",\r\n            \"menuOrder\": 1,\r\n            \"menus\": [\r\n                null\r\n            ],\r\n            \"name\": \"ASN/Receipt\",\r\n            \"parentMenu\": \"Inbound\",\r\n            \"path\": \"/asn\"\r\n        }\r\n    ],\r\n    \"owner\": [\r\n        \"string\"\r\n    ],\r\n    \"password\": \"password\",\r\n    \"resourcePermissions\": [\r\n        {\r\n            \"enable\": false,\r\n            \"permissionName\": \"GET_ASN_HEADER_RESPONSE\",\r\n            \"permissionValue\": \"/easyview/asnheaderresponse\",\r\n            \"usersId\": 0\r\n        }\r\n    ],\r\n    \"roleNames\": [\r\n        \"Role1\",\r\n        \"Role2\"\r\n    ],\r\n    \"username\": \"tmsadmin\",\r\n    \"warehouse\": [\r\n        \"string\"\r\n    ]\r\n}",
+					"raw": "{\r\n    \"email\": \"rsupriya@s3groupinc.com\",\r\n    \"fullName\": \"Supriya\",\r\n    \"username\": \"Supriya\",\r\n    \"language\": \"en\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/users"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/users"
 			},
 			"response": []
 		},
