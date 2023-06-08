@@ -317,18 +317,24 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"admin\": true,\r\n  \"email\": \"abc@gmail.com\",\r\n  \"fullName\": \"TMS Administrator\",\r\n  \"menuPermissions\": [\r\n    {\r\n      \"add\": true,\r\n      \"componentName\": \"ASN/Receipt\",\r\n      \"delete\": true,\r\n      \"edit\": true,\r\n      \"menus\": [\r\n        null\r\n      ],\r\n      \"name\": \"ASN/Receipt\",\r\n      \"parentMenu\": \"Inbound\",\r\n      \"path\": \"/asn\",\r\n      \"readOnly\": true,\r\n      \"update\": true\r\n    }\r\n  ],\r\n  \"owner\": [\r\n    {\r\n      \"id\": 0,\r\n      \"ownerName\": \"string\"\r\n    }\r\n  ],\r\n  \"password\": \"password\",\r\n  \"roleNames\": [\r\n    \"Role1\",\r\n    \"Role2\"\r\n  ],\r\n  \"username\": \"tmsadmin\"\r\n}",
+					"raw": "{\r\n    \"enabled\": false,\r\n    \"email\": \"rsupriya@s3groupinc.com\",\r\n    \"fullName\": \"Supriya\",\r\n    \"username\": \"Supriya\",\r\n    \"roleNames\": [\r\n        \"admin\"\r\n    ],\r\n    \"owner\": [],\r\n    \"language\": \"en\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "s3demo1.eastus.cloudapp.azure.com:8800/users"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/users"
 			},
 			"response": []
 		},
