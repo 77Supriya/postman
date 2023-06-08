@@ -545,12 +545,12 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MTA4NTA2MywiaWF0IjoxNjcwMjIxMDYzfQ.Xl4x9nsUnijfWMFblMl7VbWGWzb7UTrIe6Pf2vtVmeddaig7W1LMwFkytrXYXIaslV-TSWMB_Zf5kM9SCfbSOA"
+						"token": "{{token}}"
 					}
 				},
 				"method": "GET",
 				"header": [],
-				"url": "http://qavm-s3group.eastus.cloudapp.azure.com:9000/umapi/roles"
+				"url": "http://qa-s3group.eastus.cloudapp.azure.com:9000/umapi/roles"
 			},
 			"response": []
 		},
