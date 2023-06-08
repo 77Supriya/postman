@@ -448,7 +448,7 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Njc1OTIxNywiaWF0IjoxNjU1ODk1MjE3fQ.uspevNIRfD-PZru1l7aP6QcdYIXN2toUkVdDE0ASx7Wp6qY7Tx2Bb2EQpEJt5xPkhKkkUERyyUhKRXpwR8zGMw"
+						"token": "{{token}}"
 					}
 				},
 				"method": "PUT",
