@@ -361,7 +361,7 @@
 			"response": []
 		},
 		{
-			"name": "Users_/Delete users by email",
+			"name": "Users_/Delete users",
 			"id": "50b862f6-3b64-4ad8-8d35-1cd23477ce89",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -378,7 +378,7 @@
 						}
 					}
 				},
-				"url": "s3demo1.eastus.cloudapp.azure.com:8800/users"
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/users/rsupriya@s3groupinc.com"
 			},
 			"response": []
 		},
