@@ -392,7 +392,7 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Nzk1MTI3MywiaWF0IjoxNjU3MDg3MjczfQ.S0aW6WvkBnu4jjbXF-eHfFJbf_urw3KnvPBd4YKOswLT172eVuVQOo1YDVAJ6Tt1RtQQoOdm-PI64rUt29hmXA"
+						"token": "{{token}}"
 					}
 				},
 				"method": "PUT",
@@ -420,14 +420,14 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1Njc1OTIxNywiaWF0IjoxNjU1ODk1MjE3fQ.uspevNIRfD-PZru1l7aP6QcdYIXN2toUkVdDE0ASx7Wp6qY7Tx2Bb2EQpEJt5xPkhKkkUERyyUhKRXpwR8zGMw"
+						"token": "{{token}}"
 					}
 				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"action\": {\r\n    \"actions\": {\r\n      \"CREATE\": false,\r\n      \"UPLOAD SELECTED\": false,\r\n      \"DELETE SELECTED\": false\r\n    }\r\n  },\r\n  \"componentName\": \"Shipment Order Create\",\r\n  \"menuOrder\": 2,\r\n  \"menus\": [\r\n    null\r\n  ],\r\n  \"name\": \"Shipment Order Create\",\r\n  \"parentMenu\": \"Outbound\",\r\n  \"path\": \"/shipmentordercreate\"\r\n}\r\n\r\n",
+					"raw": "{\r\n  \"action\": {\r\n    \"actions\": {\r\n      \"CREATE\": false,\r\n      \"UPLOAD SELECTED\": false,\r\n      \"DELETE SELECTED\": false\r\n    }\r\n  },\r\n  \"componentName\": \"Shipment Order Create\",\r\n  \"menuOrder\": 2,\r\n  \"menus\": [\r\n    null\r\n  ],\r\n  \"name\": \"Shipment Order Create\",\r\n  \"parentMenu\": \"Outbound\",\r\n  \"path\": \"/shipmentordercreate\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
