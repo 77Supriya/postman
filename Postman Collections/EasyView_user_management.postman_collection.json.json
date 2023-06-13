@@ -35,7 +35,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userName\": \"admin\",\r\n    \"password\": \"password@1\"\r\n}",
+					"raw": "{\r\n    \"userName\": \"admin\",\r\n    \"password\": \"password\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -535,7 +535,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "SMTP Creation",
 			"id": "ab93ebe4-f5c4-48fb-a577-3f0bed243e65",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
