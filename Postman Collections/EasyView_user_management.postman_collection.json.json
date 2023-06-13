@@ -535,7 +535,7 @@
 			"response": []
 		},
 		{
-			"name": "SMTP Creation",
+			"name": "New Request",
 			"id": "ab93ebe4-f5c4-48fb-a577-3f0bed243e65",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
