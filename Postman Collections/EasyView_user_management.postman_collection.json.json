@@ -535,15 +535,24 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "SMTP Creation",
 			"id": "ab93ebe4-f5c4-48fb-a577-3f0bed243e65",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": ""
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailType\": \"smtp\",\r\n    \"emailProjectId\": null,\r\n    \"clientId\": null,\r\n    \"clientSecret\": null,\r\n    \"redirectUri\": [\r\n        null\r\n    ],\r\n    \"emailId\": \"testuser@s3groupinc.com\",\r\n    \"accessToken\": null,\r\n    \"refreshToken\": null,\r\n    \"password\": \"yUMg4m6QDC726nK>1\",\r\n    \"hostName\": \"smtp.gmail.com\",\r\n    \"portNumber\": \"587\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/mail/config"
 			},
 			"response": []
 		},
