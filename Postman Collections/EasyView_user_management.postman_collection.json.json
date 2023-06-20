@@ -551,7 +551,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"emailType\": \"smtp\",\r\n    \"emailProjectId\": null,\r\n    \"clientId\": null,\r\n    \"clientSecret\": null,\r\n    \"redirectUri\": [\r\n        null\r\n    ],\r\n    \"emailId\": \"testuser@s3groupinc.com\",\r\n    \"accessToken\": null,\r\n    \"refreshToken\": null,\r\n    \"password\": \"yUMg4m6QDC726nK>1\",\r\n    \"hostName\": \"smtp123\",\r\n    \"portNumber\": \"563\"\r\n}",
+					"raw": "{\r\n    \"emailType\": \"smtp\",\r\n    \"emailProjectId\": null,\r\n    \"clientId\": null,\r\n    \"clientSecret\": null,\r\n    \"redirectUri\": [\r\n        null\r\n    ],\r\n    \"emailId\": \"testuser@s3groupinc.com\",\r\n    \"accessToken\": null,\r\n    \"refreshToken\": null,\r\n    \"password\": \"yUMg4m6QDC726nK>1\",\r\n    \"hostName\": \"smtp.gmail.com\",\r\n    \"portNumber\": \"587\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
