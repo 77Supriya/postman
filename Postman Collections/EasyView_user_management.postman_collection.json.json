@@ -42,7 +42,7 @@
 						}
 					}
 				},
-				"url": "qa-s3group.eastus.cloudapp.azure.com:9000/umapi/login"
+				"url": "dev-vm-s3group.eastus.cloudapp.azure.com:9000/umapi/login"
 			},
 			"response": []
 		},
